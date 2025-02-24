@@ -1,0 +1,15 @@
+env/
+tests/
+config.py
+*.db
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
