@@ -14,7 +14,7 @@ quiz bot mini app (on bale messanger)
 ### Configuration File
 an example of a `config.py` file
 ```python
-...
+DATABASE_URL = "sqlite+aiosqlite:///mydb.sqlite3"
 ```
 
 ## Testing Instructions
