@@ -28,7 +28,11 @@ async def get_or_create_user(user_id: str) -> User:
     """create user if doesn't exist"""
     async with AsyncSessionLocal() as db:
         async with db.begin():
-            user = await db.query(User).filter_by(bale_id=user_id).first()
+            res = await db.execute(
+                select(User)
+                .filter(User.bale_id==user_id)
+            )
+            user = res.scalar_one_or_none()
             if not user:
                 user = User(bale_id=user_id)
                 db.add(user)
